@@ -17,6 +17,19 @@ public class GameController : MonoBehaviour
     void Start()
     {
         instance = this;
+        Scene currentScene = SceneManager.GetActiveScene();
+        string currentName = currentScene.name;
+
+        if (currentName == "Main_Menu")
+        {
+            PlayerPrefs.SetInt("Score", 0);
+        }
+
+        else
+        {
+            totalScore = PlayerPrefs.GetInt("Score");
+            scoreText.text = totalScore.ToString();
+        }
     }
 
     public void UpdateScore(int score)
@@ -30,8 +43,19 @@ public class GameController : MonoBehaviour
         gameOver.SetActive(true);
     }
 
-    public void RestartGame(string levelName)
+    public void LoadScene(string levelName)
     {
         SceneManager.LoadScene(levelName);
+    }
+
+    public void NextScene(string levelName)
+    {
+        PlayerPrefs.SetInt("Score", totalScore);
+        SceneManager.LoadScene(levelName);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
