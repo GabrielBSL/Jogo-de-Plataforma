@@ -12151,7 +12151,12 @@ PrefabInstance:
     - target: {fileID: 6946978702592430520, guid: 0d820f504a94c184697bb78ea8ac4822,
         type: 3}
       propertyPath: moveTime
-      value: 0.7
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6946978702592430520, guid: 0d820f504a94c184697bb78ea8ac4822,
+        type: 3}
+      propertyPath: isVertical
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6946978702592430522, guid: 0d820f504a94c184697bb78ea8ac4822,
         type: 3}
@@ -12161,7 +12166,7 @@ PrefabInstance:
     - target: {fileID: 6946978702592430522, guid: 0d820f504a94c184697bb78ea8ac4822,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -4.2
       objectReference: {fileID: 0}
     - target: {fileID: 6946978702592430522, guid: 0d820f504a94c184697bb78ea8ac4822,
         type: 3}
